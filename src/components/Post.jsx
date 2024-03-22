@@ -5,10 +5,12 @@ function Post(){
   return(
     <div>
       <h3>Test Post</h3>
-      <p>This is a test post we'll edit later!</p>
+      <p>This Post is amazing</p>
       <p>Likes: 30</p>
       <p>Comments:</p>
-      <Comment/>
+      <Comment content="This is a test comment!" />
+      <Comment content="This is another test comment!" />
+      <Comment content="This is yet another test comment!" />
     </div>
   )
 }
