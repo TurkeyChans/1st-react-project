@@ -6,5 +6,4 @@ function Comment(){
     </div>
   )
 }
-
 export default Comment
