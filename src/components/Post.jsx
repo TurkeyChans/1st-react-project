@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
+
 function Post(){
   return(
     <div>
