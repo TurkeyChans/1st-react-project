@@ -5,8 +5,10 @@ function App() {
   return (
     <div>
       <h1>Fakebook!</h1>
-      
-      <Post /> 
+      {/*CreatePostForm*/}
+      {/*Feed*/}
+      <Post content="This is a test post!" /> 
+      <Post content="This is another test post!"/> 
     </div>
   );
 }

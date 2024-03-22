@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 import Comment from './Comment';
 
-function Post(){
+function Post(props){
   const [likes, setLikes] = useState(0);
   function handleLike(){
     setLikes(likes + 1);
   }
   return(
     <div>
-      <h3>Test Post</h3>
+      <h3>{props.content}</h3>
       <p>This Post is amazing</p>
       <p>Likes: {likes}</p>
       <button onClick={handleLike}>Like</button>
