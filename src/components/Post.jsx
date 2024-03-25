@@ -7,17 +7,25 @@ function Post(props){
   function handleLike(){
     setLikes(likes + 1);
   }
-  return(
-    <div>
-      <h3>{props.content}</h3>
-      <p>This Post is amazing</p>
-      <p>Likes: {likes}</p>
-      <button onClick={handleLike}>Like</button>
-      <p>Comments:</p>
-      <Comment content="This is a test comment!" />
-      <Comment content="This is another test comment!" />
-      <Comment content="This is yet another test comment!" />
-    </div>
-  )
+  let row = props.content.map((data) => {
+    return(
+      <div>
+        <h3>{data.title}</h3>
+        <p>{data.ds}</p>
+        <p>Likes: {likes}</p>
+        <button onClick={handleLike}>Like</button>
+        <p>Comments:</p>
+        <Comment content="This is a test comment!" />
+        <Comment content="This is another test comment!" />
+        <Comment content="This is yet another test comment!" />
+      </div>
+    )
+    })
+    return(
+      <div>
+        <h1>Post</h1>
+        {row}
+      </div>
+    )
 }
 export default Post
