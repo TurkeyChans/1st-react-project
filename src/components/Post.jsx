@@ -10,8 +10,8 @@ function Post(props){
   let row = props.content.map((data) => {
     return(
       <div>
-        <h3>Title: {data.title}</h3>
-        <p>Description: {data.ds}</p>
+        <h3>{data.title}</h3>
+        <p>{data.ds}</p>
         <p>Likes: {likes}</p>
         <button onClick={handleLike}>Like</button>
         <p>Comments:</p>
