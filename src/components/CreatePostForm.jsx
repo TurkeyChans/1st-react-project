@@ -20,6 +20,7 @@ function CreatePostForm(props) {
     return(
         <div>
             <form onSubmit={handleSubmit}>
+            
                 <input id='title' type='text' placeholder='Title' onChange={handleTitleChange}></input>
                 <input id='description' type='text' placeholder='Description' onChange={handleDsChange}></input>
                 <input type='submit' disabled={title === "" || ds === ""}></input>

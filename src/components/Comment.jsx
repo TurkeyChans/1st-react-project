@@ -1,8 +1,9 @@
-import React from 'react';
+import { useState } from 'react';
 
 function Comment(props){
   return(
     <div>
+     
       <p>{props.content}</p>
     </div>
   )
