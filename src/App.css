@@ -40,3 +40,22 @@
 .read-the-docs {
   color: #888;
 }
+
+.Poster {
+  border: 2px solid;
+  border-radius:5px;
+  margin: 3px;
+}
+
+.likebutton {
+  border: 2px solid;
+  border-radius:5px;
+}
+
+.submit {
+  margin: 3px;
+}
+
+.text {
+  margin: 2px;
+}

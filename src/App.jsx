@@ -1,7 +1,8 @@
-
 import { useState } from 'react';
-import Post from './components/Post'; 
-import CreatePostForm from './components/CreatePostForm'; 
+import Feed from './components/Feed'; 
+import CreatePostForm from './components/CreatePostForm';
+import './App.css';
+
 function App() {
   const [post, setPost] = useState([])
   let handleNewSubmission = (data) => {
@@ -11,8 +12,7 @@ function App() {
     <div>
       <h1>Fakebook!</h1>
       <CreatePostForm onNewSubmit={handleNewSubmission}/>
-      {/*Feed*/}
-      <Post content={post} />
+      <Feed content={post} />
     </div>
   );
   

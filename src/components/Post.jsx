@@ -1,30 +1,21 @@
 import React, { useState } from 'react';
-
-import Comment from './Comment';
+import CreateComment from './CreateComment';
+import Comment from './Comment'
+import Like from './Like'
 
 function Post(props){
-  const [likes, setLikes] = useState(0);
-  function handleLike(){
-    setLikes(likes + 1);
+  const [comment, setComment] = useState([])
+  let handleNewSubmission = (data) => {
+    setComment([...comment, data])
   }
-  let row = props.content.map((data) => {
     return(
-      <div>
-        <h3>{data.title}</h3>
-        <p>{data.ds}</p>
-        <p>Likes: {likes}</p>
-        <button onClick={handleLike}>Like</button>
+      <div className='Poster'>
+        <h3>Title: {props.data.title}</h3>
+        <p>Description: {props.data.ds}</p>
+        <Like />
         <p>Comments:</p>
-        <Comment content="This is a test comment!" />
-        <Comment content="This is another test comment!" />
-        <Comment content="This is yet another test comment!" />
-      </div>
-    )
-    })
-    return(
-      <div>
-        <h1>Post</h1>
-        {row}
+        <CreateComment onNewSubmit={handleNewSubmission}/>
+        <Comment content={comment}/>
       </div>
     )
 }
